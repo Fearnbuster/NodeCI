@@ -2,7 +2,7 @@ launguage: node_js
 node_js:
   - "8"
 dist: trusty
-  - mongodb
+  - mongodb --dbpath=data/blogster
   - redis-server
 env: 
   - NODE_ENV=ci PORT=3000
