@@ -15,7 +15,6 @@ install:
   - npm run build
 before_script:
   - sleep 15
-  - mongo
 script:
   - nohup npm run start &
   - sleep 3
