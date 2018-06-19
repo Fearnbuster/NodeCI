@@ -13,8 +13,10 @@ cache:
 install: 
   - npm install
   - npm run build
+before_script:
+  - sleep 15
+  - mongo blogster
 script:
-  - sleep 10
   - nohup npm run start &
   - sleep 3
   - npm run test
