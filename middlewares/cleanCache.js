@@ -4,5 +4,7 @@ const { clearHash } = require('../services/cache');
 module.exports = async (req, res, next) => {
   await next();
 
-  clearHash(req.user.id);
+  if (req.user.id) {
+    clearHash(req.user.id);
+  }
 };

@@ -6,7 +6,7 @@ const keys = require('../config/keys');
 
 const originalExec = mongoose.Query.prototype.exec;
 
-const client = redis.createClient(keys[redisURL]);
+const client = redis.createClient(keys.redisURL);
 client.hget = util.promisify(client.hget);
 
 mongoose.Query.prototype.cache = function (options = {}) {
